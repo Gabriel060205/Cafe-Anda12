@@ -24,7 +24,7 @@ class item extends Model
 
     public function category()
     {
-        return $this->belongsTo(Categoty::class);
+        return $this->belongsTo(Category::class);
     }
 
     public function orderItems()
