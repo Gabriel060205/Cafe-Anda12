@@ -21,13 +21,11 @@ class ItemFactory extends Factory
             'category_id' => $this->faker->numberBetween(1, 2),
             'price' => $this->faker->randomFloat(2, 1000, 10000),
             'description' => $this->faker->text(),
-            'img' => $this->faker->imageUrl(),
+            'img' => fake()->randomElement(
+                ['https://images.unsplash.com/photo-1623341214825-9f4f963727da',
+                'https://images.unsplash.com/photo-1594041680534-e8c8cdebd659',
+                'https://images.unsplash.com/photo-1571175534150-72cd2b5a6039']),
             'is_active' => $this->faker->boolean(),
-            
-           
-            
-            'image' => null,
-            'is_available' => $this->faker->boolean(80),
         ];
     }
 }
